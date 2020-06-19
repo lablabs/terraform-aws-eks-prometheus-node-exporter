@@ -1,0 +1,13 @@
+repos:
+  - repo: git://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.31.0
+    hooks:
+    - id: terraform_fmt
+    - id: terraform_docs
+      args:
+        - '--args=--no-requirements --no-providers --sort-by-required'
+
+  - repo: git://github.com/pecigonzalo/pre-commit-terraform-vars
+    rev: master
+    hooks:
+    - id: terraform-vars
