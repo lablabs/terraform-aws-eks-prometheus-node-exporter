@@ -5,6 +5,6 @@ terraform {
     aws   = "~> 2.0"
     local = "~> 1.2"
     null  = "~> 2.0"
-    helm  = "~> 1.0"
+    helm  = "~> 1.2"
   }
 }
