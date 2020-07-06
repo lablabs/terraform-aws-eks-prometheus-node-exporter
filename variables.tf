@@ -1,14 +1,17 @@
 # Required module inputs
+
 variable "cluster_name" {}
 variable "cluster_identity_oidc_issuer" {}
 variable "cluster_identity_oidc_issuer_arn" {}
 
 # terraform-aws-eks-prometheus-node-exporter
+
 variable "enabled" {
   type = bool
 }
 
 # Helm
+
 variable "helm_chart_name" {
   default = "prometheus-node-exporter"
 }
@@ -26,6 +29,7 @@ variable "helm_repo_url" {
 }
 
 # K8S
+
 variable "k8s_namespace" {
   default = "kube-system"
 }
