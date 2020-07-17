@@ -1,39 +1,53 @@
-# Required module inputs
-
-variable "cluster_name" {}
-variable "cluster_identity_oidc_issuer" {}
-variable "cluster_identity_oidc_issuer_arn" {}
-
-# terraform-aws-eks-prometheus-node-exporter
+# prometheus-node-exporter
 
 variable "enabled" {
-  type = bool
+  type        = bool
+  default     = true
+  description = "Variable indicating whether deployment is enabled"
 }
 
 # Helm
 
 variable "helm_chart_name" {
-  default = "prometheus-node-exporter"
+  type        = string
+  default     = "prometheus-node-exporter"
+  description = "Helm chart name to be installed"
 }
 
 variable "helm_chart_version" {
-  default = "1.11.0"
+  type        = string
+  default     = "1.11.0"
+  description = "Version of the Helm chart"
 }
 
 variable "helm_release_name" {
-  default = "prometheus-node-exporter"
+  type        = string
+  default     = "prometheus-node-exporter"
+  description = "Helm release name"
 }
 
 variable "helm_repo_url" {
-  default = "https://kubernetes-charts.storage.googleapis.com"
+  type        = string
+  default     = "https://kubernetes-charts.storage.googleapis.com"
+  description = "Helm repository"
 }
 
-# K8S
+# K8s
 
 variable "k8s_namespace" {
-  default = "kube-system"
+  type        = string
+  default     = "kube-system"
+  description = "The K8s namespace in which the prometheus-node-exporter service account has been created"
 }
 
 variable "mod_dependency" {
-  default = null
+  type        = bool
+  default     = null
+  description = "Dependence variable binds all AWS resources allocated by this module, dependent modules reference this variable"
+}
+
+variable "settings" {
+  type        = map(any)
+  default     = {}
+  description = "Additional settings which will be passed to the Helm chart values, see https://hub.helm.sh/charts/stable/prometheus-node-exporter"
 }
