@@ -13,16 +13,26 @@ We help companies build, run, deploy and scale software and infrastructure by em
 
 A terraform module to deploy Prometheus node exporter on Amazon EKS cluster.
 
+## Related Projects
+
+Check out these related projects.
+
+- [terraform-aws-eks-calico](https://github.com/lablabs/terraform-aws-eks-calico)
+- [terraform-aws-eks-external-dns](https://github.com/lablabs/terraform-aws-eks-external-dns)
+- [terraform-aws-eks-cluster-autoscaler](https://github.com/lablabs/terraform-aws-eks-cluster-autoscaler)
+- [terraform-aws-eks-alb-ingress](https://github.com/lablabs/terraform-aws-eks-alb-ingress)
+- [terraform-aws-eks-kube-state-metrics](https://github.com/lablabs/terraform-aws-eks-kube-state-metrics)
+- [terraform-aws-eks-node-problem-detector](https://github.com/lablabs/terraform-aws-eks-node-problem-detector)
+
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
 | Name | Version |
 |------|---------|
-| terraform | ~> 0.12.0 |
-| aws | ~> 2.0 |
-| helm | ~> 1.2 |
-| local | ~> 1.2 |
-| null | ~> 2.0 |
+| terraform | >= 0.12.26, < 0.14.0 |
+| aws | >= 2.0, < 4.0 |
+| helm | >= 1.0, < 1.4.0 |
+| kubernetes | >=1.10.0 |
 
 ## Inputs
 
@@ -30,9 +40,9 @@ A terraform module to deploy Prometheus node exporter on Amazon EKS cluster.
 |------|-------------|------|---------|:--------:|
 | enabled | Variable indicating whether deployment is enabled | `bool` | `true` | no |
 | helm\_chart\_name | Helm chart name to be installed | `string` | `"prometheus-node-exporter"` | no |
-| helm\_chart\_version | Version of the Helm chart | `string` | `"1.11.0"` | no |
+| helm\_chart\_version | Version of the Helm chart | `string` | `"1.11.2"` | no |
 | helm\_release\_name | Helm release name | `string` | `"prometheus-node-exporter"` | no |
-| helm\_repo\_url | Helm repository | `string` | `"https://kubernetes-charts.storage.googleapis.com"` | no |
+| helm\_repo\_url | Helm repository | `string` | `"https://prometheus-community.github.io/helm-charts"` | no |
 | k8s\_namespace | The K8s namespace in which the prometheus-node-exporter service account has been created | `string` | `"kube-system"` | no |
 | mod\_dependency | Dependence variable binds all AWS resources allocated by this module, dependent modules reference this variable | `bool` | `null` | no |
 | settings | Additional settings which will be passed to the Helm chart values, see https://hub.helm.sh/charts/stable/prometheus-node-exporter | `map(any)` | `{}` | no |
