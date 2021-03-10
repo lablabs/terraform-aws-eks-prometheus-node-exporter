@@ -50,7 +50,7 @@ No Modules.
 |------|-------------|------|---------|:--------:|
 | enabled | Variable indicating whether deployment is enabled | `bool` | `true` | no |
 | helm\_chart\_name | Helm chart name to be installed | `string` | `"prometheus-node-exporter"` | no |
-| helm\_chart\_version | Version of the Helm chart | `string` | `"1.11.2"` | no |
+| helm\_chart\_version | Version of the Helm chart | `string` | `"1.15.0"` | no |
 | helm\_release\_name | Helm release name | `string` | `"prometheus-node-exporter"` | no |
 | helm\_repo\_url | Helm repository | `string` | `"https://prometheus-community.github.io/helm-charts"` | no |
 | k8s\_namespace | The K8s namespace in which the prometheus-node-exporter service account has been created | `string` | `"kube-system"` | no |
