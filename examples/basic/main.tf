@@ -14,7 +14,7 @@ module "eks_cluster" {
   region     = "eu-central-1"
   subnet_ids = module.vpc.public_subnets
   vpc_id     = module.vpc.vpc_id
-  name       = "node-problem-detector"
+  name       = "prometheus-node-exporter"
 
   workers_security_group_ids = [module.eks_workers.security_group_id]
   workers_role_arns          = [module.eks_workers.workers_role_arn]
@@ -25,8 +25,7 @@ module "eks_workers" {
 
   cluster_certificate_authority_data = module.eks_cluster.eks_cluster_certificate_authority_data
   cluster_endpoint                   = module.eks_cluster.eks_cluster_endpoint
-  cluster_name                       = module.eks_cluster.eks_cluster_id
-  cluster_security_group_id          = module.eks_cluster.security_group_id
+  cluster_name                       = "prometheus-node-exporter"
   instance_type                      = "t3.medium"
   max_size                           = 1
   min_size                           = 1
@@ -40,4 +39,6 @@ module "eks_workers" {
 
 module "prometheus_node_exporter" {
   source = "../../"
+
+  cluster_name = module.eks_cluster.eks_cluster_id
 }

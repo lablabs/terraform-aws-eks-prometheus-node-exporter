@@ -16,7 +16,7 @@ variable "helm_chart_name" {
 
 variable "helm_chart_version" {
   type        = string
-  default     = "1.15.0"
+  default     = "2.0.3"
   description = "Version of the Helm chart"
 }
 
@@ -50,4 +50,15 @@ variable "settings" {
   type        = map(any)
   default     = {}
   description = "Additional settings which will be passed to the Helm chart values, see https://hub.helm.sh/charts/stable/prometheus-node-exporter"
+}
+
+variable "cluster_name" {
+  type        = string
+  description = "The name of the cluster"
+}
+
+variable "values" {
+  type        = string
+  default     = ""
+  description = "Additional yaml encoded values which will be passed to the Helm chart."
 }
