@@ -11,23 +11,23 @@ No requirements.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_eks_cluster"></a> [eks\_cluster](#module\_eks\_cluster) | cloudposse/eks-cluster/aws | n/a |
-| <a name="module_eks_workers"></a> [eks\_workers](#module\_eks\_workers) | cloudposse/eks-workers/aws | n/a |
-| <a name="module_prometheus_node_exporter"></a> [prometheus\_node\_exporter](#module\_prometheus\_node\_exporter) | ../../ | n/a |
-| <a name="module_vpc"></a> [vpc](#module\_vpc) | terraform-aws-modules/vpc/aws | n/a |
+| eks_cluster | cloudposse/eks-cluster/aws |  |
+| eks_workers | cloudposse/eks-workers/aws |  |
+| prometheus_node_exporter | ../../ |  |
+| vpc | terraform-aws-modules/vpc/aws |  |
 
 ## Resources
 
-| Name | Type |
-|------|------|
-| [aws_eks_cluster.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/eks_cluster) | data source |
-| [aws_eks_cluster_auth.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/eks_cluster_auth) | data source |
+| Name |
+|------|
+| [aws_eks_cluster](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/eks_cluster) |
+| [aws_eks_cluster_auth](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/eks_cluster_auth) |
 
 ## Inputs
 
-No inputs.
+No input.
 
 ## Outputs
 
-No outputs.
+No output.
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
