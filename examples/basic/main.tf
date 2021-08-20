@@ -39,6 +39,4 @@ module "eks_workers" {
 
 module "prometheus_node_exporter" {
   source = "../../"
-
-  cluster_name = module.eks_cluster.eks_cluster_id
 }
