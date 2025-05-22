@@ -1,5 +1,4 @@
 <!-- BEGIN_TF_DOCS -->
-<<<<<<< HEAD
 # AWS EKS Prometheus node exporter Terraform module
 
 A terraform module to deploy [Prometheus node exporter](https://prometheus.io/docs/guides/node-exporter/) on Amazon EKS cluster.
