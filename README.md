@@ -3,8 +3,8 @@
 
 A terraform module to deploy [Prometheus node exporter](https://prometheus.io/docs/guides/node-exporter/) on Amazon EKS cluster.
 
-![Terraform validation](https://github.com/lablabs/terraform-aws-eks-prometheus-node-exporter/workflows/Terraform%20validation/badge.svg?branch=master)
-[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-success?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+[![Terraform validate](https://github.com/lablabs/terraform-aws-eks-prometheus-node-exporter/actions/workflows/validate.yaml/badge.svg)](https://github.com/lablabs/terraform-aws-eks-prometheus-node-exporter/actions/workflows/validate.yaml)
+[![pre-commit](https://github.com/lablabs/terraform-aws-eks-prometheus-node-exporter/actions/workflows/pre-commit.yaml/badge.svg)](https://github.com/lablabs/terraform-aws-eks-prometheus-node-exporter/actions/workflows/pre-commit.yaml)
 
 ---
 

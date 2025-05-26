@@ -6,7 +6,6 @@
  * [![Terraform validate](https://github.com/lablabs/terraform-aws-eks-prometheus-node-exporter/actions/workflows/validate.yaml/badge.svg)](https://github.com/lablabs/terraform-aws-eks-prometheus-node-exporter/actions/workflows/validate.yaml)
  * [![pre-commit](https://github.com/lablabs/terraform-aws-eks-prometheus-node-exporter/actions/workflows/pre-commit.yaml/badge.svg)](https://github.com/lablabs/terraform-aws-eks-prometheus-node-exporter/actions/workflows/pre-commit.yaml)
  */
-
 locals {
   addon = {
     name      = "prometheus-node-exporter"
